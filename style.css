@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  font-family: "Lora", serif !important;
+  /* 여러 css가 겹쳤을 때, 마지막에 적용하기 위한 역할 (!important) */
+}
+
+.nav {
+  /* 스크롤을 내려도 navbar 상단에 고정 */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.navbar {
+  list-style: none;
+  flex-direction: row;
+  display: flex;
+  background-color: #f8f2f2bb;
+  margin: 0;
+}
+
+.nav-item {
+  /* 상하좌우 여백 */
+  padding: 25px;
+}
+
+.nav-item a {
+  /* nav-item 클래스 아래의 a 요소 */
+  text-decoration: none;
+  color: black;
+}
+
+.nav-item a:hover {
+  color: #ee7081;
+}
+
+.logo {
+  display: flex;
+  height: 50px;
+  margin: 10px 40px 10px 0px; /* 위, 오른쪽, 아래, 왼쪽 */
+}
+
+.logo img {
+  /* 일정한 사이즈 span(.logo) 안에 이미지 잘리자않고 넣기 */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav-icons {
+  list-style: none;
+  right: 0;
+  position: absolute;
+  padding-top: 25px;
+  padding-right: 20px;
+}
+
+.nav-icons li {
+  float: left; /* 가로(수평) 배열 */
+  padding-right: 25px;
+  font-size: 1.2em;
+}
+
+.nav-icons li:hover {
+  /* hover : 마우스를 올려놨을 때 */
+  font-size: 1.4em;
+}
+
+.nav-icons li a {
+  text-decoration: none;
+  color: black;
+}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 400px;
+}
+
+.footer-top {
+  background-color: #f8f2f2;
+  height: 85%;
+}
+
+.footer-box-left {
+  width: 40%;
+  height: 100%;
+  float: left;
+}
+
+.footer-box-left img {
+  width: 400px;
+  margin-top: 90px;
+  margin-left: 100px;
+}
+
+.footer-box-right {
+  width: 60%;
+  height: 100%;
+  float: right;
+  text-align: center;
+}
+
+.footer-box-subtitle {
+  padding-top: 130px;
+}
+
+.footer-box-subtitle div {
+  color: black;
+  font-size: 1.4em;
+  padding-bottom: 30px;
+}
+
+.footer-box-subtitle a {
+  color: #ee7081;
+  font-size: 1.2em;
+  text-decoration: none; /* a 링크 밑줄 없애기 */
+  padding-right: 30px;
+}
+
+.footer-box-subtitle a:hover {
+  color: #eb3d54;
+}
+
+.footer-bottom {
+  background-color: #222222;
+  height: 15%;
+  color: #f8f2f2;
+  text-align: center;
+}
+
+.footer-bottom div {
+  padding-top: 22px;
+}
+
+.contents {
+  min-height: 800px;
+}
+
+.main-banner {
+  width: 100%;
+  height: 500px;
+  background: url(images/main.jpg) no-repeat 50% 50% / cover;
+  text-align: center;
+  padding-top: 300px;
+}
+
+.main-banner b {
+  font-size: 4em;
+  font-family: "Sacramento", cursive !important;
+}
+
+.main-banner p {
+  font-size: 2em;
+  font-family: "Architects Daughter", cursive !important;
+}
+
+.first-box {
+  height: 600px;
+  background-color: #f8f2f2;
+}
+
+.second-box {
+  height: 600px;
+}
