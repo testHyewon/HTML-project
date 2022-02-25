@@ -10,6 +10,8 @@ body {
   width: 100%;
   top: 0;
   left: 0;
+  /* 겹치는 요소들의 순서 결정 */
+  z-index: 1;
 }
 
 .navbar {
@@ -32,6 +34,7 @@ body {
 }
 
 .nav-item a:hover {
+  text-decoration: none;
   color: #ee7081;
 }
 
@@ -137,6 +140,8 @@ body {
 
 .contents {
   min-height: 800px;
+  margin-top: 70px;
+  text-align: center;
 }
 
 .main-banner {
@@ -164,4 +169,43 @@ body {
 
 .second-box {
   height: 600px;
+}
+
+/* about.html */
+.page-title {
+  font-size: 3em;
+  padding: 30px 150px;
+  text-align: left;
+}
+
+.box-1 {
+  padding: 0px 150px 20px 150px;
+  text-align: left;
+  font-size: 1.3em;
+}
+
+.profile-img {
+  /* 일정한 크기의 div 안에 이미지 잘리면서 꽉차게 */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.box-1-title {
+  color: #ee7081;
+  font-size: 3.5em;
+  /* 그림에 텍스트가 겹쳐지게 */
+  margin-left: -80px;
+  padding-bottom: 20px;
+}
+
+.box-2 {
+  background-color: #f4f1ef;
+  padding: 50px 150px;
+  font-size: 1.3em;
+}
+
+.box-3 {
+  padding: 50px 150px;
+  font-size: 1.3em;
 }
