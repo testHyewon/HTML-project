@@ -203,9 +203,34 @@ body {
   background-color: #f4f1ef;
   padding: 50px 150px;
   font-size: 1.3em;
+  text-align: left;
+}
+
+.box-2-subtitle {
+  font-size: 1.5em;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.box-2-bottom {
+  color: #ee7081;
+  padding-top: 30px;
+  text-align: center;
 }
 
 .box-3 {
   padding: 50px 150px;
   font-size: 1.3em;
+}
+
+.box-3-subtitle {
+  font-size: 1.5em;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+/* faq.html */
+.faq-box {
+  padding: 0px 150px 20px 150px;
+  text-align: left;
 }
