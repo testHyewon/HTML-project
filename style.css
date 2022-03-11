@@ -234,3 +234,23 @@ body {
   padding: 0px 150px 20px 150px;
   text-align: left;
 }
+
+/* contact.html */
+.contact-box {
+  text-align: left;
+  font-size: 1.2em;
+  padding: 20px 150px;
+}
+
+.contact-submit-btn {
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: 0.9em;
+  padding: 10px 20px;
+  float: right;
+}
+
+.contact-submit-btn:hover {
+  background-color: #ee7081;
+}

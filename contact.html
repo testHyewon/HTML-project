@@ -61,42 +61,42 @@
       </ul>
     </nav>
     <div class="contents">
-      <div class="page-title">FAQ</div>
-      <div class="faq-box">
-        <div class="panel-group">
-          <div class="panel panel-default" style="margin-bottom: 20px">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a
-                  data-toggle="collapse"
-                  href="#collapse1"
-                  style="text-decoration: none"
-                >
-                  ▼ How can I contact you?
-                </a>
-              </h4>
-            </div>
-            <div id="collapse1" class="panel-collapse collapse">
-              <div class="panel-body">Email is best! gpffps369@gmail.com</div>
-            </div>
+      <div class="page-title">CONTACT</div>
+      <div class="contact-box">
+        <p>
+          If you fill in the input field below, the contents will be sent to my
+          email.
+        </p>
+        <p>Email : gpffps369@gmail.com</p>
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="mail-title">Title</label>
+            <input class="form-control input-lg" id="mail-title" type="text" />
+            <label for="mail-name" style="padding-top: 20px">Name</label>
+            <input class="form-control input-lg" id="mail-name" type="text" />
+            <label for="mail-message" style="padding-top: 20px">Message</label>
+            <textarea
+              class="form-control"
+              id="mail-message"
+              rows="10"
+            ></textarea>
           </div>
-          <div class="panel panel-default" style="margin-bottom: 20px">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a
-                  data-toggle="collapse"
-                  href="#collapse2"
-                  style="text-decoration: none"
-                >
-                  Collapsible Group Item #2
-                </a>
-              </h4>
-            </div>
-            <div id="collapse2" class="panel-collapse collapse">
-              <div class="panel-body">answer 2</div>
-            </div>
-          </div>
-        </div>
+          <button type="submit" class="contact-submit-btn">Submit</button>
+        </form>
+        <script type="text/javascript">
+          // href에 mailto를 이용하면 메일함을 통해 문구 입력 -> subject: 이메일 제목, body: 본문
+          document
+            .getElementById("contact-form")
+            .addEventListener("submit", function (e) {
+              window.location.href =
+                "mailto:gpffps369@gmail.com?subject=[" +
+                document.getElementById("mail-name").value +
+                "] " +
+                document.getElementById("mail-title").value +
+                "&body=" +
+                document.getElementById("mail-message").value;
+            });
+        </script>
       </div>
     </div>
     <footer>
