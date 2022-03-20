@@ -82,7 +82,27 @@ body {
   display: none;
 }
 
+/* 미디어 쿼리 -> 반응형 웹처리 */
+@media screen and (max-width: 900px) {
+  .nav-item {
+    display: none;
+  }
+
+  .menu-dropdown {
+    display: inline;
+    margin-right: -10px;
+    margin-top: -5px;
+  }
+}
+
 /* footer */
+
+@media screen and (max-width: 1200px) {
+  /* 창 크기가 1200px보다 작아지면 아래의 css 실행 */
+  .footer-box-left {
+    display: none;
+  }
+}
 
 .footer {
   left: 0;
