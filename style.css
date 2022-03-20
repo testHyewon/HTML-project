@@ -4,6 +4,7 @@ body {
   /* 여러 css가 겹쳤을 때, 마지막에 적용하기 위한 역할 (!important) */
 }
 
+/* navbar */
 .nav {
   /* 스크롤을 내려도 navbar 상단에 고정 */
   position: fixed;
@@ -19,16 +20,17 @@ body {
   flex-direction: row;
   display: flex;
   background-color: #f8f2f2bb;
-  margin: 0;
 }
 
 .nav-item {
   /* 상하좌우 여백 */
+  font-size: 1em;
   padding: 25px;
 }
 
 .nav-item a {
   /* nav-item 클래스 아래의 a 요소 */
+  text-align: center;
   text-decoration: none;
   color: black;
 }
@@ -39,12 +41,15 @@ body {
 }
 
 .logo {
-  display: flex;
   height: 50px;
-  margin: 10px 40px 10px 0px; /* 위, 오른쪽, 아래, 왼쪽 */
+  margin: 10px 50px 10px 20px; /* 위, 오른쪽, 아래, 왼쪽 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
-.logo img {
+.logo-img {
   /* 일정한 사이즈 span(.logo) 안에 이미지 잘리자않고 넣기 */
   width: 100%;
   height: 100%;
@@ -60,20 +65,24 @@ body {
 }
 
 .nav-icons li {
-  float: left; /* 가로(수평) 배열 */
+  cursor: pointer;
+  font-size: 1.3em;
   padding-right: 25px;
-  font-size: 1.2em;
-}
-
-.nav-icons li:hover {
-  /* hover : 마우스를 올려놨을 때 */
-  font-size: 1.4em;
+  float: left; /* 가로(수평)로 배열 */
 }
 
 .nav-icons li a {
+  text-align: center;
   text-decoration: none;
-  color: black;
+  color: inherit;
+  cursor: pointer;
 }
+
+.menu-dropdown {
+  display: none;
+}
+
+/* footer */
 
 .footer {
   left: 0;
@@ -83,83 +92,75 @@ body {
 }
 
 .footer-top {
-  background-color: #f8f2f2;
   height: 85%;
+  color: #ee7081;
+  background-color: #f8f2f2;
 }
 
 .footer-box-left {
-  width: 40%;
-  height: 100%;
-  float: left;
+  text-align: center;
 }
 
 .footer-box-left img {
-  width: 400px;
-  margin-top: 90px;
+  width: 500px;
+  margin-top: 70px;
   margin-left: 100px;
 }
 
 .footer-box-right {
-  width: 60%;
-  height: 100%;
-  float: right;
+  padding-top: 130px;
+  list-style-type: none;
   text-align: center;
 }
 
-.footer-box-subtitle {
-  padding-top: 130px;
-}
-
-.footer-box-subtitle div {
+.footer-box-right div {
   color: black;
-  font-size: 1.4em;
   padding-bottom: 30px;
+  font-size: 1.4em;
 }
 
-.footer-box-subtitle a {
-  color: #ee7081;
+.footer-box-right a {
+  text-decoration: none;
   font-size: 1.2em;
-  text-decoration: none; /* a 링크 밑줄 없애기 */
+  color: #ee7081;
+  cursor: pointer;
   padding-right: 30px;
 }
 
-.footer-box-subtitle a:hover {
-  color: #eb3d54;
+.footer-box-right a:hover {
+  text-decoration: none;
+  color: #e72b44;
 }
 
 .footer-bottom {
-  background-color: #222222;
   height: 15%;
+  background-color: #222222;
+  text-align: center;
   color: #f8f2f2;
-  text-align: center;
+  padding-top: 23px;
 }
 
-.footer-bottom div {
-  padding-top: 22px;
-}
+/* contents */
 
-.contents {
-  min-height: 800px;
-  margin-top: 70px;
-  text-align: center;
-}
-
-.main-banner {
+.main-img {
   width: 100%;
   height: 500px;
   background: url(images/main.jpg) no-repeat 50% 50% / cover;
+  /* 반복되지 않기 위해 no-repeat, 포지션은 50에 50, 사이즈는 cover => 적절하게 이미지 넣기 */
   text-align: center;
-  padding-top: 300px;
+  padding-top: 200px; /* 글자 내리기 */
+  font-family: "Parisienne", cursive !important;
 }
 
-.main-banner b {
-  font-size: 4em;
+.main-img b {
+  font-size: 3em;
   font-family: "Sacramento", cursive !important;
 }
 
-.main-banner p {
-  font-size: 2em;
+.main-img p {
   font-family: "Architects Daughter", cursive !important;
+  margin-top: 10px;
+  font-size: 1.5em;
 }
 
 .first-box {
@@ -171,17 +172,24 @@ body {
   height: 600px;
 }
 
-/* about.html */
+#contents {
+  min-height: 800px;
+  margin-top: 70px;
+  /* 내부 요소 가운데 정렬 */
+  text-align: center;
+}
+
 .page-title {
   font-size: 3em;
   padding: 30px 150px;
   text-align: left;
 }
 
+/* about.html */
 .box-1 {
   padding: 0px 150px 20px 150px;
+  font-size: 1.2em;
   text-align: left;
-  font-size: 1.3em;
 }
 
 .profile-img {
@@ -194,39 +202,28 @@ body {
 .box-1-title {
   color: #ee7081;
   font-size: 3.5em;
-  /* 그림에 텍스트가 겹쳐지게 */
   margin-left: -80px;
-  padding-bottom: 20px;
 }
 
 .box-2 {
   background-color: #f4f1ef;
   padding: 50px 150px;
-  font-size: 1.3em;
-  text-align: left;
+  font-size: 1.2em;
 }
 
 .box-2-subtitle {
   font-size: 1.5em;
-  padding-bottom: 20px;
-  text-align: center;
-}
-
-.box-2-bottom {
-  color: #ee7081;
-  padding-top: 30px;
-  text-align: center;
+  padding-bottom: 10px;
 }
 
 .box-3 {
   padding: 50px 150px;
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 
 .box-3-subtitle {
   font-size: 1.5em;
   padding-bottom: 30px;
-  text-align: center;
 }
 
 /* faq.html */
@@ -237,9 +234,14 @@ body {
 
 /* contact.html */
 .contact-box {
-  text-align: left;
-  font-size: 1.2em;
   padding: 20px 150px;
+  font-size: 1.2em;
+  text-align: left;
+}
+
+.heart-icon:hover {
+  text-decoration: none;
+  color: #ee7081;
 }
 
 .contact-submit-btn {
@@ -253,4 +255,8 @@ body {
 
 .contact-submit-btn:hover {
   background-color: #ee7081;
+  color: white;
+  border: none;
+  font-size: 0.9em;
+  padding: 10px 20px;
 }
