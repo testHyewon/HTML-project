@@ -280,3 +280,30 @@ body {
   font-size: 0.9em;
   padding: 10px 20px;
 }
+
+/* library.html */
+
+.library-box {
+  padding: 30px 150px 70px 150px;
+  text-align: left;
+}
+
+.library-subtitle {
+  font-size: 1.7em;
+}
+
+.library-grid {
+  padding-top: 50px;
+}
+
+.library-image {
+  /* 부모 요소에 알맞게 이미지가 변환 => 반응형으로 만들 수 있음 */
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.library-bottom-menu {
+  padding: 100px 0px 30px 0px;
+  font-size: 2em;
+}
